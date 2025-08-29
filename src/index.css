@@ -16,6 +16,7 @@
   --color-orange: #cc6033;
   --color-sand: #d6995c;
   --color-coral: #ea4884;
+
   --color-sb: #f8a4af;
   --color-sbDark: #e88995;
   --animate-orbit: orbit 50s linear infinite;
@@ -56,7 +57,16 @@ body {
   font-family: "Funnel Display", sans-serif;
   color: #f8a4af;
   scroll-behavior: smooth;
+
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
+}
+
+#zoom-section {
+  mask-image: radial-gradient(circle at bottom, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle at bottom, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 100%);
+  background-color: #fcfafb; /* fade color */
 }
 
 .c-space {
