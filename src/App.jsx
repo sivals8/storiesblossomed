@@ -4,6 +4,7 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Stories from "./sections/Stories";
 import Contact from "./sections/Contact";
+import Admin from './sections/Admin';
 import ReactPlayer from "react-player";
 
 import { Canvas } from '@react-three/fiber';
@@ -25,7 +26,7 @@ const App = () => {
   <div className = "container mx-auto max-w-7xl">
     <About />
     <Contact />
-
+    <Admin />
   </div>
 
   </>
