@@ -1,22 +1,38 @@
 import { useState } from "react";
 import {motion} from "motion/react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
+function Logo() {
+    return (
+
+        <ul className = "nav-ul">
+            <li className = "nav-li">
+                <Link className="nav-link text-sb" to="/">
+                    <img src = {"assets/logo.png"} className = "w-30 h-18" />
+                </Link>
+            </li>
+        </ul>
+    )
+}
+
 function Navigation() {
     return ( 
         <ul className = "nav-ul">
-            <li className = "nav-li">
-                <a className = "nav-link text-sb" href = "#home">Home</a>
+            {/* <li className = "nav-li">
+                <Link className="nav-link text-sb" to="/">Home</Link>
+            </li> */}
+
+            <li className = "nav-li hoverSmall">
+                <HashLink smooth to="/#stories" className="nav-link text-sb">Stories</HashLink>
             </li>
 
-            <li className = "nav-li">
-                <a className = "nav-link text-sb" href = "#stories">Stories</a>
+            <li className = "nav-li hoverSmall">
+                <Link className="nav-link text-sb" to="/about">About</Link>
             </li>
 
-            <li className = "nav-li">
-                <a className = "nav-link text-sb" href = "#about">About</a>
-            </li>
-
-            <li className = "nav-li">
-                <a className = "nav-link text-sb" href = "#contact">Contact</a>
+            <li className = "nav-li hoverSmall">
+                <Link className="nav-link text-sb" to="/contact">Contact</Link>
             </li>
         </ul>
     )
@@ -24,22 +40,22 @@ function Navigation() {
 const Navbar = () => {
     const[isOpen, setIsOpen] = useState(false);
   return (
-    <div classname = 'fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40'>
+    <div className = 'fixed inset-x-0 z-20 w-full backdrop-blur-lg'>
         <div className = "mx-auto c-space max-w-7xl" >
             <div className = "flex items-center justify-between py-2 sm:py-0">
-            <button>
-                
-                    <img src = {isOpen ? "assets/logo.png" : "assets/logo.png"} className = "w-30 h-18" />
-                </button>
+                <div className = "hoverSmall">
+                    <Logo />
+                </div>
+            
                 <a 
                 href = "/"
-                className = "text-xl font-bold transition-colors text-sb hover:text-sbDark">storiesblossomed
+                className = "text-xl font-bold transition-colors text-sb hover:text-sbDark hoverSmall" >storiesblossomed
                 </a>
                 <button
                 onClick = {() => setIsOpen(!isOpen)} className = "flex cursor-pointer text-sb hover: text-sbDark focus: outline-none sm:hidden"> 
                     <img src = {isOpen ? "assets/close.svg" : "assets/menu.svg"} className = "w-6 h-6" alt = "toggle" />
                 </button>
-                <nav className = "hidden sm:flex ">
+                <nav className = "hidden sm:flex">
                     <Navigation />
                 </nav>
 

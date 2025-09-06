@@ -1,36 +1,46 @@
-import React from 'react'
+import React from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
-import About from "./sections/About";
+import About from "./sections/About"; // can be used inside Home or separately
 import Stories from "./sections/Stories";
-import Contact from "./sections/Contact";
-import Admin from './sections/Admin';
-import ReactPlayer from "react-player";
+import Contact from "./sections/Contact"; // same as above
+import Footer from "./components/Footer";
 
-import { Canvas } from '@react-three/fiber';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AboutPage from "./pages/AboutPage";     // new page
+import ContactPage from "./pages/ContactPage"; // new page
+
 const App = () => {
   return (
-  <>
-  <div className = "container mx-auto max-w-7xl">
-    <Navbar/>
-    <Hero />
+    <Router>
+      <Navbar />
+      <Routes>
+        {/* Home route */}
+        <Route
+          path="/"
+          element={
+            <>
+              <div className="container mx-auto max-w-7xl">
+                <Hero />
+              </div>
+              <div id = "stories">
+                <Stories />
+              </div>
+              
+            </>   
+          }
+        />
 
-  </div>
+        {/* About page */}
+        <Route path="/about" element={<About />} />
 
+        {/* Contact page */}
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
- <Stories />
-
-  <div className = "container mx-auto max-w-7xl">
-    <About />
-    <Contact />
-    <Admin />
-  </div>
-
-  </>
+      <Footer />
+    </Router>
   );
 };
 
-export default App
+export default App;
