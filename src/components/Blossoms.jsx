@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei';
 
 export function Blossoms(props) {
-  const { nodes, materials } = useGLTF('/assets/cherry_blossoms.glb')
+  const { nodes, materials } = useGLTF('./assets/cherry_blossoms.glb')
   return (
     <group {...props} dispose={null}>
       <group position={[33.173, 144.278, -91.5]} rotation={[3.128, -0.091, 2.031]} scale={7.815}>

@@ -1,4 +1,5 @@
 import React from 'react'
+import backVid from '/assets/sb_contactbg.mp4'
 
 const ContactParallax = () => {
   return (
@@ -12,7 +13,7 @@ const ContactParallax = () => {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover -z-50"
             >
-                <source src="/assets/sb_contactbg.mp4" type="video/mp4" />
+                <source src= {backVid} type="video/mp4" />
             </video> 
                 
     

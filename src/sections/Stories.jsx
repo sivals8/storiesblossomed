@@ -114,7 +114,7 @@ const Stories = () => {
             {/*Left arrow on side */}
             <button
               onClick = {handlePrev}
-              className = "absolute left-[27%] z-20 bg-black/50 hover:bg-black/70 p-3 rounded-full"
+              className = "absolute left-[27%] z-20 bg-plum/50 hover:bg-plum/70 p-3 rounded-full"
             >
               <ChevronLeft className = "text-sb w-6 h-6" />
             </button>
@@ -157,7 +157,7 @@ const Stories = () => {
             {/*right arrow on side */}
             <button
               onClick = {handleNext}
-              className = "absolute right-[27%] z-20 bg-black/50 hover:bg-black/70 p-3 rounded-full"
+              className = "absolute right-[27%] z-20 bg-plum/50 hover:bg-plum/70 p-3 rounded-full"
             >
               <ChevronRight className = "text-sb w-6 h-6" />
             </button>

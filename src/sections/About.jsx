@@ -39,7 +39,7 @@ const About = () => {
               </p>
 
               <div className = "flex justify-center">
-                <img src="../assets/logo.png" className = ""/>
+                <img src="./assets/logo.png" className = ""/>
               </div>
 
             </div>
