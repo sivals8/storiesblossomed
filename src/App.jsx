@@ -6,7 +6,7 @@ import Stories from "./sections/Stories";
 import Contact from "./sections/Contact"; // same as above
 import Footer from "./components/Footer";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";     // new page
 import ContactPage from "./pages/ContactPage"; // new page
 
