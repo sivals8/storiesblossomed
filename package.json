@@ -6,7 +6,7 @@
   "homepage": "https://sivals8.github.io/storiesblossomed",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/storiesblossomed/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
