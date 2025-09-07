@@ -16,9 +16,12 @@
   --color-orange: #cc6033;
   --color-sand: #d6995c;
   --color-coral: #ea4884;
+  --color-plum: #4b1c2a;
+  --color-lightPlum: #7f4e5a;
 
   --color-sb: #f8a4af;
   --color-sbDark: #e88995;
+  --color-sbAccent: #e17897;
   --color-lightGrey: #d3d3d3;
   --animate-orbit: orbit 50s linear infinite;
   @keyframes orbit {
@@ -115,6 +118,14 @@ body {
   @apply hover:-translate-y-1 duration-200
 }
 
+.rotateHover{
+  transition: transform .5s ease-in-out;
+}
+
+.rotateHover:hover{
+  transform: rotate(144deg);
+}
+
 /* About Section */
 .grid-1 {
   @apply row-span-1 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
@@ -127,11 +138,11 @@ body {
 }
 
 .grid-default-color {
-  @apply p-6 bg-storm rounded-2xl;
+  @apply p-6 bg-sbDark/30 rounded-2xl;
 }
 
 .grid-special-color {
-  @apply p-6 bg-gradient-to-b from-storm to-sb/60 rounded-2xl;
+  @apply p-6 bg-gradient-to-b from-plum to-sb/60 rounded-2xl;
 }
 .grid-black-color {
   @apply p-6 bg-gradient-to-tl from-[#3A3A3A] via-[#242424] to-[#3A3A3A] rounded-2xl;

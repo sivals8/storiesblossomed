@@ -45,7 +45,7 @@ const BlossomBackground = () => {
           makeDefault
           position={[0, 0, 180]}
         />
-        <Environment preset="city" />
+        <Environment preset="sunset" />
         <Blossoms />
       </>
     )

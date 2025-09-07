@@ -16,6 +16,17 @@ function Logo() {
     )
 }
 
+function Sb() {
+    return (
+
+        <ul className = "nav-ul">
+            <li className = "nav-li">
+            <Link className="nav-link text-heading text-sb" to="/">storiesblossomed</Link>
+            </li>
+        </ul>
+    )
+}
+
 function Navigation() {
     return ( 
         <ul className = "nav-ul">
@@ -43,14 +54,14 @@ const Navbar = () => {
     <div className = 'fixed inset-x-0 z-20 w-full backdrop-blur-lg'>
         <div className = "mx-auto c-space max-w-7xl" >
             <div className = "flex items-center justify-between py-2 sm:py-0">
-                <div className = "hoverSmall">
+                <div className = "rotateHover">
                     <Logo />
                 </div>
             
-                <a 
-                href = "/"
-                className = "text-xl font-bold transition-colors text-sb hover:text-sbDark hoverSmall" >storiesblossomed
-                </a>
+                <div>
+                    <Sb />
+                </div>
+                
                 <button
                 onClick = {() => setIsOpen(!isOpen)} className = "flex cursor-pointer text-sb hover: text-sbDark focus: outline-none sm:hidden"> 
                     <img src = {isOpen ? "assets/close.svg" : "assets/menu.svg"} className = "w-6 h-6" alt = "toggle" />

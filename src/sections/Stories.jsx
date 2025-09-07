@@ -11,13 +11,13 @@ const Stories = () => {
   const [showVideo, setShowVideo] = useState(false);
   const [videos, setVideos] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const frontUrl = "http://localhost:1337";
+  const frontUrl = "https://sbadmin-portal.onrender.com";
   const containerRef = useRef(null);
 
   // Fetch videos from Strapi
   useEffect(() => {
     const fetchVideos = () => {
-      fetch("http://localhost:1337/api/videos?populate=thumbnail")
+      fetch("https://sbadmin-portal.onrender.com/api/videos?populate=thumbnail")
         .then((res) => res.json())
         .then((data) => {
           if (data.data && data.data.length > 0) {
@@ -25,7 +25,7 @@ const Stories = () => {
               id: item.id,
               youtubeId: item.youtubeId,
               thumbnail:
-                frontUrl + item.thumbnail[0].formats.medium.url,
+                item.thumbnail[0].formats.medium.url,
               name: item.description[0]?.children[0]?.text || "",
             }));
             setVideos(formatted);
@@ -99,9 +99,10 @@ const Stories = () => {
       </Canvas>
 
       {/* Overlay text */}
-      <div className="absolute inset-0 flex items-start justify-center pointer-events-none mt-100" 
-      style={{ textShadow: "2px 2px 6px rgba(0,0,0,0.8)" }}>
-        <h1 className="overlay-text text-5xl font-medium text-sb">
+      <div className="absolute inset-0 flex items-start justify-center pointer-events-none " 
+      style={{ textShadow: "2px 2px 10px rgba(121,68,83,1)", top: "50vh" }}
+      >
+        <h1 className="overlay-text text-5xl font-medium text-white">
           Stories
         </h1>
       </div>
@@ -123,7 +124,7 @@ const Stories = () => {
               href={videos[getIndex(-1)].youtubeId}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute left-[15%] transform -translate-x-1/2 scale-75 opacity-60 transition-all duration-500"
+              className="absolute left-[15%] transform -translate-x-1/2 scale-75 opacity-60 transition-all duration-500"ß
             >
               <img
                 src={videos[getIndex(-1)].thumbnail}

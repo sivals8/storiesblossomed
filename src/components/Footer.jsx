@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer 
     className = "w-full bg-sb/40 text-white py-10 text-center"
-    style={{marginTop: '200px'}}
     >  
         <>
             <div className = "max-w-6xl mx-auto px-6 grid grid-cols-1 md: grid-cols-3 gap-8 text-center">
