@@ -26,7 +26,7 @@ const Stories = () => {
               id: item.id,
               youtubeId: item.youtubeId,
               thumbnail:
-                thumb ? thumb : null, 
+                thumb, 
               name: item.description[0]?.children[0]?.text || "",
             }));
             setVideos(formatted);
