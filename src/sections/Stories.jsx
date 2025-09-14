@@ -21,12 +21,10 @@ const Stories = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.data && data.data.length > 0) {
-            const thumb = "https://sbadmin-portal.onrender.com/uploads/medium_IMG_9314_33033a0e62.jpeg";
             const formatted = data.data.map((item) => ({
               id: item.id,
               youtubeId: item.youtubeId,
-              thumbnail:
-                thumb, 
+              thumbnail: item.thumbnail?.[0]?.formats?.medium?.url, 
               name: item.description[0]?.children[0]?.text || "",
             }));
             setVideos(formatted);
