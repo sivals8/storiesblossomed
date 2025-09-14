@@ -25,7 +25,7 @@ const Stories = () => {
               id: item.id,
               youtubeId: item.youtubeId,
               thumbnail:
-                frontUrl + item.thumbnail?.[0]?.formats?.medium?.url, 
+                frontUrl + item.thumbnail[0]?.formats.medium.url, 
               name: item.description[0]?.children[0]?.text || "",
             }));
             setVideos(formatted);
@@ -34,6 +34,8 @@ const Stories = () => {
         .catch((err) => console.error("Error fetching videos:", err));
     };
 
+    console.log(formatted);
+    
     fetchVideos();
     const interval = setInterval(fetchVideos, 10000);
     return () => clearInterval(interval);
