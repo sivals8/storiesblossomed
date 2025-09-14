@@ -21,11 +21,12 @@ const Stories = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.data && data.data.length > 0) {
+            const thumb = item.thumbnail?.[0]?.formats?.medium?.url;
             const formatted = data.data.map((item) => ({
               id: item.id,
               youtubeId: item.youtubeId,
               thumbnail:
-                frontUrl + item.thumbnail[0]?.formats.medium.url, 
+                thumb ? frontUrl + thumb : null, 
               name: item.description[0]?.children[0]?.text || "",
             }));
             setVideos(formatted);
@@ -35,7 +36,7 @@ const Stories = () => {
     };
 
     console.log(formatted);
-    
+
     fetchVideos();
     const interval = setInterval(fetchVideos, 10000);
     return () => clearInterval(interval);
