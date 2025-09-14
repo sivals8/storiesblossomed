@@ -25,7 +25,7 @@ const Stories = () => {
               id: item.id,
               youtubeId: item.youtubeId,
               thumbnail:
-                frontUrl + item.thumbnail[0].formats.medium.url,
+                item.thumbnail[0].formats.medium.url,
               name: item.description[0]?.children[0]?.text || "",
             }));
             setVideos(formatted);
