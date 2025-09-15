@@ -1,8 +1,10 @@
 <p align="center">
-  <img src="public/assets/sb-logo-header.png" alt="storiesblossomed" width="600"/>
+  <img src="public/assets/sb-logo-header.png" alt="storiesblossomed" width="500"/>
 </p>
 
 A simple and scalable web app brought to you by Strapi, Supabase, Cloudinary and me :)
+
+Click [here](https://sivals8.github.io/storiesblossomed/) to view the site!
 
 ---
 
