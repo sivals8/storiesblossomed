@@ -4,6 +4,7 @@
 
 A simple and scalable web app brought to you by Strapi, Supabase, Cloudinary and me :)
 
+## 🌸 Demo Site Link 
 Click [here](https://sivals8.github.io/storiesblossomed/) to view the site!
 
 ---
