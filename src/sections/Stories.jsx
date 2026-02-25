@@ -33,8 +33,6 @@ const Stories = () => {
         .catch((err) => console.error("Error fetching videos:", err));
     };
 
-    console.log(formatted);
-
     fetchVideos();
     const interval = setInterval(fetchVideos, 10000);
     return () => clearInterval(interval);

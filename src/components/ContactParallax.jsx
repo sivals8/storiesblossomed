@@ -1,5 +1,5 @@
 import React from 'react'
-import backVid from '/assets/inquiry-bg.webm'
+import backVid from '/assets/inquiry-bg.webm' /*new file from videographer*/
 
 const ContactParallax = () => {
   return (
@@ -13,7 +13,7 @@ const ContactParallax = () => {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover -z-50"
             >
-                <source src= {backVid} type="video/mp4" />
+                <source src= {backVid} type="video/webm" />
             </video> 
                 
     

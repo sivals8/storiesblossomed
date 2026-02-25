@@ -35,8 +35,11 @@ const Contact = () => {
   return (
 
       <>
-      <div className = "relative w-screen h-screen" >
+      <div className = "relative w-screen h-screen " >
         <ContactParallax />
+
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+        
       </div>
 
         {/* Overlay text */}
