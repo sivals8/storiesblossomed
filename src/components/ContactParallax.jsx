@@ -1,5 +1,5 @@
 import React from 'react'
-import backVid from '/assets/inquiry-bg.webm' /*new file from videographer*/
+import backVid from '/assets/inquiry-bg.webm' 
 
 const ContactParallax = () => {
   return (
