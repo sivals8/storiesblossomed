@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
 
             <div className = "flex mx-auto items-end justify-center pt-20">
-                {/*auto update header*/}
+                
                 <p>Copyright © {new Date().getFullYear()} | Stories Blossomed</p>
             </div>
 
