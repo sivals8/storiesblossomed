@@ -3,10 +3,10 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer 
-    className = "w-full bg-sb/40 text-white py-10 text-center"
+    className = "w-full bg-sb/40 text-white py-8 md:py-12 text-center"
     >  
         <>
-            <div className = "max-w-6xl mx-auto px-6 grid grid-cols-1 md: grid-cols-3 gap-8 text-center">
+            <div className = "max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 {/*first column */}
                 <div>
                     <h3 className = "text-lg font-semibold mb-3">About</h3>
@@ -55,7 +55,7 @@ const Footer = () => {
 
             </div>
 
-            <div className = "flex mx-auto items-end justify-center pt-20">
+            <div className = "flex mx-auto items-end justify-center pt-8 md:pt-12">
                 
                 <p>Copyright © {new Date().getFullYear()} | Stories Blossomed</p>
             </div>
